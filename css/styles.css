@@ -26,7 +26,7 @@ body {
   text-decoration: none;
   font-weight: 400;
   font-style: normal;
-  font-family: roboto, sans-serif;
+  font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
 }
 .list {
@@ -114,20 +114,33 @@ img {
   list-style: none;
 }
 .site-nav .link:hover,
-.link:focus,
-.link:active {
+.link:focus {
   color: var(--acent);
 }
+.nav-item {
+}
+/* position для ссылки */
 .current {
+  position: relative;
   display: block;
   padding: 32px 0;
 
-  color: var(--acent);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  color: var(--acent);
+}
+.current::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 4px;
+  background: var(--acent);
+  border-radius: 2px;
 }
 /* навигация для авторизации*/
 .nav-auth {
@@ -285,6 +298,7 @@ img {
 .work-items:nth-child(3) {
   margin-right: 0;
 }
+/* overlay with subtitle */
 .work-items::before {
   content: "";
   display: inline-block;
@@ -596,10 +610,39 @@ a {
 .portfolio-items:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
+/* portfolio-overlay */
+.portfolio-overlay {
+  position: relative;
+}
+.portfolio-overlay::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+.potfolio-overlay-text {
+  position: absolute;
+  top: 63px;
+  left: 24px;
+  right: 24px;
+
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--white);
+  opacity: 0;
+}
+
 .servise {
   padding: 20px 24px;
 }
-.portfolio-items:hover {
+
+.portfolio-items:hover .portfolio-overlay::before,
+.portfolio-items:hover .potfolio-overlay-text {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  opacity: 1;
 }
