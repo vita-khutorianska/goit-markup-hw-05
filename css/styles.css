@@ -301,8 +301,9 @@ img {
   position: absolute;
   top: 251px;
   bottom: 27px;
-  height: 16px;
+
   left: 50%;
+  text-align: center;
 
   transform: translate(-50%);
   margin: 0;
