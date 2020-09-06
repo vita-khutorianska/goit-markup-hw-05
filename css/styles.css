@@ -277,12 +277,43 @@ img {
   flex-wrap: wrap;
 }
 .work-items {
+  position: relative;
+
   width: calc((100% - 30px * 2) / 3);
   margin-right: 30px;
 }
 .work-items:nth-child(3) {
   margin-right: 0;
 }
+.work-items::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  width: 370px;
+  height: 70px;
+
+  background: rgba(47, 48, 58, 0.8);
+}
+.work-subtitle {
+  position: absolute;
+  top: 251px;
+  bottom: 27px;
+  height: 16px;
+  left: 50%;
+
+  transform: translate(-50%);
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--white);
+  /* text-transform: uppercase; */
+}
+/* позиционорование текста к картинке */
 
 /*team*/
 
