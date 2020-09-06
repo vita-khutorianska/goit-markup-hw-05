@@ -214,16 +214,40 @@ img {
   background-color: var(--acent);
   text-decoration: none;
 }
-/* modal window */
+/* backdrop*/
 
-/* .backdrop {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-} */
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+/* modal */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+
+  background: var(--white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.button-close {
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
 
 /*Преимущества*/
 
@@ -308,15 +332,16 @@ img {
   margin-right: 0;
 }
 /* overlay with subtitle */
-.work-items::before {
+.work-thumb::before {
   content: "";
-  display: inline-block;
   position: absolute;
-
   bottom: 0;
   left: 0;
   width: 100%;
   height: 70px;
+  display: inline-block;
+  text-align: center;
+
   text-transform: uppercase;
   background: rgba(47, 48, 58, 0.8);
 }
@@ -324,20 +349,20 @@ img {
   position: absolute;
   top: 251px;
   bottom: 27px;
+  width: 100%;
 
   left: 50%;
-  text-align: center;
 
   transform: translate(-50%);
+  text-align: center;
   margin: 0;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   color: var(--white);
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
 }
-/* позиционорование текста к картинке */
 
 /*team*/
 
@@ -629,6 +654,7 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
+
   background: rgba(33, 150, 243, 0.9);
   opacity: 0;
 }

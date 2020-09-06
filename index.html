@@ -56,15 +56,19 @@
     </header>
     <main>
       <!---Банер -->
-      <section hero>
+      <section>
         <div class="overlay">
           <h1 class="hero-title">
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <a href="" class="button-hero">Заказать услугу</a>
+          <a href="" class="button-hero" data-modal-open>Заказать услугу</a>
         </div>
-        <div class="backdrop"></div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="button-close" data-modal-close>x</button>
+          </div>
+        </div>
       </section>
       <!--- Advantages-->
       <section class="section">
@@ -109,25 +113,31 @@
           <ul class="work-list list">
             <!-- div for position -->
             <li class="work-items">
-              <!-- <div class="work-thumb"></div> -->
-              <img
-                src="./img2/box-1.jpg"
-                alt="компьютер на столе"
-                width="370"
-              />
-              <h3 class="work-subtitle">Десктопные приложения</h3>
+              <div class="work-thumb">
+                <img
+                  src="./img2/box-1.jpg"
+                  alt="компьютер на столе"
+                  width="370"
+                />
+                <h3 class="work-subtitle">Десктопные приложения</h3>
+              </div>
+            </li>
+
+            <li class="work-items">
+              <div class="work-thumb">
+                <img
+                  src="./img2/box-2.jpg"
+                  alt="мобильный телефон в руке"
+                  width="370"
+                />
+                <h3 class="work-subtitle">Мобильные приложения</h3>
+              </div>
             </li>
             <li class="work-items">
-              <img
-                src="./img2/box-2.jpg"
-                alt="мобильный телефон в руке"
-                width="370"
-              />
-              <h3 class="work-subtitle">Мобильные приложения</h3>
-            </li>
-            <li class="work-items">
-              <img src="./img2/boх-3.jpg" alt="планшет" width="370" />
-              <h3 class="work-subtitle">Дизайнерские решения</h3>
+              <div class="work-thumb">
+                <img src="./img2/boх-3.jpg" alt="планшет" width="370" />
+                <h3 class="work-subtitle">Дизайнерские решения</h3>
+              </div>
             </li>
           </ul>
         </div>
@@ -509,5 +519,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
