@@ -132,7 +132,7 @@ img {
   position: absolute;
   content: "";
   left: 0;
-  top: 97%;
+  bottom: 0;
 
   width: 100%;
   height: 4px;
@@ -170,6 +170,7 @@ img {
 }
 
 /* Герой*/
+
 .overlay {
   display: block;
   padding: 200px;
@@ -213,6 +214,17 @@ img {
   background-color: var(--acent);
   text-decoration: none;
 }
+/* modal window */
+
+/* .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+} */
+
 /*Преимущества*/
 
 .feature {
