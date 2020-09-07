@@ -234,8 +234,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  width: 528px;
+  width: 100%;
+  max-width: 528px;
   height: 581px;
 
   background: var(--white);
@@ -245,10 +245,19 @@ img {
 }
 .button-close {
   position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+
+  background: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  color: var(--logo-color);
+  text-align: center;
 }
-
 /*Преимущества*/
 
 .feature {
@@ -620,6 +629,7 @@ a {
 }
 
 .portfolio-items {
+  position: relative;
   width: calc((100% - 30px * 2) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -632,26 +642,24 @@ a {
   margin-bottom: 0;
 }
 /* portfolio-overlay */
-.portfolio-overlay {
-  position: relative;
-}
 .portfolio-overlay::before {
   content: "";
   display: inline-block;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
 
-  background: rgba(33, 150, 243, 0.9);
   opacity: 0;
 }
+
 .potfolio-overlay-text {
-  position: absolute;
   top: 63px;
   left: 24px;
   right: 24px;
-
+  position: absolute;
   margin: 0;
+
   font-size: 18px;
   line-height: 1.56;
   color: var(--white);
@@ -667,4 +675,5 @@ a {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   opacity: 1;
+  transition: transform 250ms ease;
 }
