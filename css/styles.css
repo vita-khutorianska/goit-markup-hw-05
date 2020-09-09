@@ -213,8 +213,6 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-
-  align-items: center;
   letter-spacing: 0.06em;
 
   color: var(--white);
@@ -360,7 +358,6 @@ img {
 }
 .work-subtitle {
   position: absolute;
-  display: inline-block;
   bottom: 0;
   width: 100%;
   height: 70px;
