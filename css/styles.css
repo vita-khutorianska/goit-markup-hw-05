@@ -236,7 +236,7 @@ img {
   opacity: 0;
   pointer-events: none;
 }
-.backdrop.is-hidden .madal {
+.backdrop.is-hidden .modal {
   transform: translateX(-50%, -50%) scale(0);
 }
 
