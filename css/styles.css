@@ -19,6 +19,7 @@ html {
   --button-bck-color: #f5f4fa;
   --bcg-hero: #c4c4c4;
   --icon-color: #afb1b8;
+  --main-transfotm: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   color: var(--primery-text-colour);
@@ -62,7 +63,16 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  list-style: none;
 
+  transition: var(--main-transfotm);
+}
 /*header*/
 .page-header {
   border: 1px solid #ececec;
@@ -103,13 +113,7 @@ img {
 .site-nav .link {
   display: block;
   padding: 32px 0;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   color: var(--primery-text-colour);
-  text-decoration: none;
-  list-style: none;
 }
 .site-nav .link:hover,
 .link:focus {
@@ -127,6 +131,8 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--acent);
+
+  transition: var(--main-transfotm);
 }
 .current::after {
   position: absolute;
@@ -148,10 +154,6 @@ img {
   display: flex;
   align-items: center;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   color: var(--text-color);
   text-decoration: none;
 }
@@ -243,6 +245,9 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+/* .button-hero:hover .backdrop {
+  opacity: 1;
+} */
 .button-close {
   position: absolute;
   top: 8px;
@@ -431,6 +436,8 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition: var(--main-transfotm);
 }
 .social-icon-link:hover,
 .social-icon-link:focus {
@@ -440,6 +447,8 @@ img {
   fill: var(--icon-color);
   width: 20px;
   height: 20px;
+
+  transition: var(--main-transfotm);
 }
 
 .social-icon-link:hover .social-icon {
@@ -467,6 +476,8 @@ img {
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: var(--main-transfotm);
 }
 
 .client-items:not(:last-child) {
@@ -474,6 +485,8 @@ img {
 }
 .client-icon {
   fill: var(--icon-color);
+
+  transition: var(--main-transfotm);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -522,6 +535,8 @@ img {
   line-height: 1.71;
   color: var(--footer-tel-mail-colour);
   text-decoration: none;
+
+  transition: var(--main-transfotm);
 }
 .adress-link:hover,
 .adress-link:focus {
@@ -561,6 +576,8 @@ img {
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition: var(--main-transfotm);
 }
 .footer-social .social-icon-item:not(:last-child) {
   margin-right: 10px;
@@ -602,6 +619,8 @@ a {
   color: var(--primery-text-colour);
   background-color: var(--button-bck-color);
   text-decoration: none;
+
+  transition: var(--main-transfotm);
 }
 
 .button-filters:focus,
