@@ -217,6 +217,9 @@ img {
 
   color: var(--white);
   background-color: var(--acent);
+  border-radius: 4px;
+  border: none;
+  outline: none;
   text-decoration: none;
 }
 /* backdrop*/
@@ -329,7 +332,7 @@ img {
 
 .section.work {
   padding-top: 0;
-  padding-bottom: 102px;
+  padding-bottom: 94px;
 }
 .work-title {
   margin-top: 0;
