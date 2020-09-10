@@ -496,7 +496,7 @@ img {
 .client-icon {
   fill: var(--icon-color);
 
-  transition: fill var(--main-transition);
+  transition: var(--main-transition);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -546,7 +546,7 @@ img {
   color: var(--footer-tel-mail-colour);
   text-decoration: none;
 
-  transition: color var(--main-transition);
+  transition: var(--main-transition);
 }
 .adress-link:hover,
 .adress-link:focus {
@@ -666,6 +666,7 @@ a {
   margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
+  transition: var(--main-transition);
 }
 .portfolio-items:nth-child(3n) {
   margin-right: 0;
